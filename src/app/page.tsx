@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="max-w-xl mx-auto">
       {data ? (
-        <GenerateSummary data={data} />
+        <GenerateSummary data={data} setData={setData} />
       ) : (
         <UploadFile
           onFileRead={handleFileRead}
