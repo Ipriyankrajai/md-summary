@@ -20,7 +20,10 @@
     "react-dom": "^18",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "@ai-sdk/openai": "^0.0.44",
+    "ai": "^3.3.5",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
