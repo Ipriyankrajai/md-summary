@@ -34,7 +34,7 @@ const GenerateSummary = ({ data }: { data: string }) => {
         </div>
       )}
 
-      {object?.map((summary, index) => (
+      {object?.data?.map((summary, index) => (
         <div key={index}>
           <p>{summary?.title}</p>
           <p>{summary?.description}</p>
