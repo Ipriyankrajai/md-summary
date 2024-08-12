@@ -3,7 +3,9 @@
 import { summarySchema } from "@/api/use-object/schema";
 import { experimental_useObject as useObject } from "ai/react";
 
-export default function Page() {
+import React from "react";
+
+const GenerateSummary = () => {
   const { object, submit, isLoading, stop } = useObject({
     api: "/api/use-object",
     schema: summarySchema,
@@ -35,4 +37,6 @@ export default function Page() {
       ))}
     </div>
   );
-}
+};
+
+export default GenerateSummary;
