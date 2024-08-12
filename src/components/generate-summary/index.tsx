@@ -38,7 +38,7 @@ const GenerateSummary = ({
       </div>
 
       {isLoading && (
-        <div className="pt-4">
+        <div className="pt-4 flex justify-between items-center">
           <div className="flex gap-1 items-center pb-2">
             <div className="font-medium">Loading</div>
             <Spinner />
