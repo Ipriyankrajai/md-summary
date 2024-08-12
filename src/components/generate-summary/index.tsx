@@ -7,6 +7,7 @@ import React, { useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { ArrowLeft } from "lucide-react";
+import Spinner from "../spinner";
 
 const GenerateSummary = ({
   data,
@@ -38,7 +39,10 @@ const GenerateSummary = ({
 
       {isLoading && (
         <div className="pt-4">
-          <div className="pb-2 font-medium">Loading...</div>
+          <div className="flex gap-1 items-center pb-2">
+            <div className="font-medium">Loading</div>
+            <Spinner />
+          </div>
           <Button variant={"destructive"} onClick={() => stop()}>
             Stop Generating
           </Button>
