@@ -52,7 +52,7 @@ const UploadFile = ({
         Select a Markdown File to Generate Summary
       </h1>
 
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <Label htmlFor="openai-key">OpenAI API Key</Label>
         <Input
           id="openai-key"
@@ -61,7 +61,7 @@ const UploadFile = ({
           onChange={(e) => setOpenAIAPIKey(e.target.value)}
           placeholder="Enter your OpenAI API key"
         />
-      </div>
+      </div> */}
       <div className="mt-5">
         <Label htmlFor="md-file">Document</Label>
         <Input
