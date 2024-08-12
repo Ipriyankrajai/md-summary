@@ -21,7 +21,11 @@ const UploadFile = ({
 
   const handleFileUpload = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (!file) return;
+
+    if (!file) {
+      toast.error("No file selected");
+      return;
+    }
 
     // check if the file is a markdown file
     if (!file.name.toLowerCase().endsWith(".md")) {
@@ -70,6 +74,7 @@ const UploadFile = ({
           onChange={handleFileUpload}
           className="mb-4"
           accept=".md"
+          aria-label="Upload Markdown file"
         />
       </div>
 
