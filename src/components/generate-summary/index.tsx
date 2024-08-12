@@ -1,6 +1,6 @@
 "use client";
 
-import { summarySchema } from "@/app/api/use-object/schema";
+import { summarySchema } from "@/app/api/generate-summary/schema";
 import { experimental_useObject as useObject } from "ai/react";
 
 import React, { useEffect, useRef } from "react";
@@ -16,7 +16,7 @@ const GenerateSummary = ({
   setData: (data: string) => void;
 }) => {
   const { object, submit, isLoading, stop } = useObject({
-    api: "/api/use-object",
+    api: "/api/generate-summary",
     schema: summarySchema,
   });
   const hasSubmitted = useRef(false);

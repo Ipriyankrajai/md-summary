@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from "react";
 import UploadFile from "@/components/upload-file";
-import GenerateSummary from "@/components/object-stream";
+import GenerateSummary from "@/components/generate-summary";
 
 export default function Home() {
   const [data, setData] = useState<string>("");
