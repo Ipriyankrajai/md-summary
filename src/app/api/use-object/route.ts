@@ -13,6 +13,7 @@ export async function POST(req: Request) {
         schema: summarySchema,
         prompt:
             `Generate 10 summary points for this context:` + context,
+        mode: "json"
     });
 
     return result.toTextStreamResponse();
