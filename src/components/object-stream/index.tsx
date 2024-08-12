@@ -1,6 +1,6 @@
 "use client";
 
-import { summarySchema } from "@/api/use-object/schema";
+import { summarySchema } from "@/app/api/use-object/schema";
 import { experimental_useObject as useObject } from "ai/react";
 
 import React, { useEffect } from "react";
