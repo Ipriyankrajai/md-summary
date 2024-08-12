@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import UploadFile from "@/components/upload-file";
+import GenerateSummary from "@/components/object-stream";
 
 export default function Home() {
   const [data, setData] = useState<string>("");
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <main className="max-w-xl mx-auto">
       {data ? (
-        <>{data}</>
+        <GenerateSummary data={data} />
       ) : (
         <UploadFile
           onFileRead={handleFileRead}

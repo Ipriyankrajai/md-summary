@@ -3,13 +3,18 @@
 import { summarySchema } from "@/api/use-object/schema";
 import { experimental_useObject as useObject } from "ai/react";
 
-import React from "react";
+import React, { useEffect } from "react";
 
-const GenerateSummary = () => {
+const GenerateSummary = ({ data }: { data: string }) => {
   const { object, submit, isLoading, stop } = useObject({
     api: "/api/use-object",
     schema: summarySchema,
   });
+
+  useEffect(() => {
+    if (!data) return;
+    submit(data);
+  }, []);
 
   return (
     <div>
